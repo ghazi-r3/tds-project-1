@@ -11,6 +11,9 @@ RUN sh /uv-installer.sh && rm /uv-installer.sh
 # Ensure the installed binary is on the `PATH`
 ENV PATH="/root/.local/bin:$PATH"
 
+# ✅ Create the /data folder
+RUN mkdir -p /data
+
 # Set up the application directory
 WORKDIR /app
 
